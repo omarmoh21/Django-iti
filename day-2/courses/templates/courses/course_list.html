@@ -1,0 +1,30 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Courses by {{ instructor.name }}</title>
+    <link rel="stylesheet" href="{% static 'courses/style.css' %}">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Courses by {{ instructor.name }}</h1>
+
+    <div class="card-container">
+        {% for course in courses %}
+        <a class="card" href="/students/course/{{ course.id }}/">
+            {% if course.thumbnail %}
+                <img src="{{ course.thumbnail.url }}" alt="{{ course.title }}" width="120" style="border-radius:10px; margin-bottom:10px;">
+            {% endif %}
+            <h3>{{ course.title }}</h3>
+            <p>{{ course.hours }} Hours</p>
+        </a>
+        {% endfor %}
+    </div>
+
+</div>
+
+</body>
+</html>

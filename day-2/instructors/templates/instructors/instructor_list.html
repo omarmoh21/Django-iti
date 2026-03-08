@@ -1,0 +1,32 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Instructors</title>
+    <link rel="stylesheet" href="{% static 'instructors/style.css' %}">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Our Instructors</h1>
+
+    <ul class="instructor-list">
+        {% for instructor in instructors %}
+        <li>
+            {% if instructor.photo %}
+                <img src="{{ instructor.photo.url }}" alt="{{ instructor.name }}" width="80" style="border-radius:50%; margin-right:10px;">
+            {% else %}
+                <img src="{% static 'instructors/images/default.png' %}" alt="Default" width="80" style="border-radius:50%; margin-right:10px;">
+            {% endif %}
+            <a href="/courses/instructor/{{ instructor.id }}/">{{ instructor.name }}</a>
+            <span>({{ instructor.department }})</span>
+        </li>
+        {% endfor %}
+    </ul>
+
+</div>
+
+</body>
+</html>
