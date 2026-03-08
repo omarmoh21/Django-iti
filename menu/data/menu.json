@@ -1,0 +1,13 @@
+[
+  {"name": "Burger", "price": 80, "description": "Cheese beef burger", "category": "food"},
+  {"name": "Pizza", "price": 120, "description": "Pepperoni pizza", "category": "food"},
+  {"name": "Pasta", "price": 95, "description": "White sauce pasta", "category": "food"},
+  {"name": "Grilled Chicken", "price": 140, "description": "Grilled chicken with rice", "category": "food"},
+  {"name": "Steak", "price": 220, "description": "Premium beef steak", "category": "food"},
+  {"name": "Fries", "price": 40, "description": "Crispy french fries", "category": "food"},
+  
+  {"name": "Coca Cola", "price": 20, "description": "Cold soft drink", "category": "drink"},
+  {"name": "Orange Juice", "price": 35, "description": "Fresh natural juice", "category": "drink"},
+  {"name": "Coffee", "price": 30, "description": "Hot black coffee", "category": "drink"},
+  {"name": "Milkshake", "price": 50, "description": "Chocolate milkshake", "category": "drink"}
+]
